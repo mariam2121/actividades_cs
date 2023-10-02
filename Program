@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        int[] arreglo = { 1, 2, 3, 4, 5 };
+        
+        Stack<int> pila = new Stack<int>();
+        foreach (int num in arreglo)
+        {
+            pila.Push(num);
+        }
+
+        int[] nuevo= new int[arreglo.Length];
+        for (int i = 0; i < arreglo.Length; i++)
+        {
+            nuevo[i] = pila.Pop();
+        }
+
+        Console.WriteLine("arreglo " + string.Join(", ", arreglo));
+        Console.WriteLine("nuevo arreglo " + string.Join(", ", nuevo));
+    }
+}
